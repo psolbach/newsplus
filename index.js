@@ -51,14 +51,8 @@ app.get("/json-ld.js", (req, res) => {
       res.send(response)
     })
 
-    .catch(function (err) {
-      console.log(err)
-    });
+    .catch(err => console.log);
 })
-
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
-});
 
 app.get('/test-article', function(req, res) {
   res.sendFile(path.join(__dirname + '/test-article.html'));
